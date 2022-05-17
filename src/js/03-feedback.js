@@ -12,7 +12,7 @@ form.addEventListener('submit', onSubmitForm);
 
 dataFromLocalStorage();
 
-let formData = {};
+let formData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 
 function onFormData(e) {
   formData[e.target.name] = e.target.value;
